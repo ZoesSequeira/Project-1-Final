@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CubeController : MonoBehaviour
 {
+    int bronzePoints = 1;
+    int silverPoints = 10;
+    int goldPoints = 100;
     public string oreType;
     // Start is called before the first frame update
     void Start()
@@ -22,10 +25,17 @@ public class CubeController : MonoBehaviour
         if (oreType == "Bronze")
         {
             ControllerScript.bronzeSupply--;
+            ControllerScript.pointTotal += bronzePoints;
         }
         else if (oreType == "Silver")
         {
             ControllerScript.silverSupply--;
+            ControllerScript.pointTotal += silverPoints;
+        }
+        else if (oreType == "Gold")
+        {
+            Controllerscript.goldSupply--;
+            ControllerScript.pointTotal += goldPoints;
         }
     }
 }

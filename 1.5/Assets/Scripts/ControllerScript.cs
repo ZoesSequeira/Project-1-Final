@@ -18,6 +18,7 @@ public class ControllerScript : MonoBehaviour
     int xPos = 0;
     GameObject MyCube;
     string lastOre;
+    public int pointTotal = 0;
    
 
     // Start is called before the first frame update
@@ -66,7 +67,7 @@ public class ControllerScript : MonoBehaviour
                 xPos -= 2;
                 lastOre = "silver";
             }
-            print("Bronze: " + bronzeSupply+"Silver: " + silverSupply+ "Gold: "+goldSupply);
+            print("Points: " + pointTotal );
         }
 
     }
